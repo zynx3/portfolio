@@ -1,69 +1,77 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="site-shell">
+      <header className="site-header">
+        <a className="wordmark" href="#top" aria-label="Pair mode home">
+          <span className="wordmark-mark">{"//"}</span> pair mode
+        </a>
+        <nav className="site-nav" aria-label="Main navigation">
+          <a href="#people">People</a>
+          <a href="#work">Selected work</a>
+          <a className="nav-contact" href="mailto:hello@pairmode.dev">Let&apos;s talk <span>↗</span></a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section className="hero-section">
+          <div className="hero-copy">
+            <p className="eyebrow"><span className="live-dot" /> Independent developers · New York / London</p>
+            <h1>Two minds.<br /><em>One build.</em></h1>
+            <p className="hero-intro">We design and ship digital products for people doing important, slightly impossible things.</p>
+            <a className="text-link" href="#work">See what we&apos;ve made <span>↓</span></a>
+          </div>
+          <div className="hero-art" aria-hidden="true">
+            <div className="hero-grid" />
+            <div className="hero-orbit orbit-one" />
+            <div className="hero-orbit orbit-two" />
+            <div className="hero-label label-top">EST. 2019</div>
+            <div className="hero-label label-bottom">BUILD / TUNE / SHIP</div>
+            <div className="hero-center">PM<span>+</span>DS</div>
+          </div>
+        </section>
+
+        <section className="people-section" id="people">
+          <div className="section-heading">
+            <p className="eyebrow">01 / The people</p>
+            <h2>A complementary<br /><em>point of view.</em></h2>
+          </div>
+          <div className="people-grid">
+            <article className="person-card person-card-amber">
+              <div className="portrait portrait-amber"><span>AM</span></div>
+              <div className="person-meta"><span>01</span><span>Product · Frontend</span></div>
+              <h3>Alex<br />Morgan</h3>
+              <p>Turns fuzzy ideas into clear, useful interfaces. Loves a good system and an even better interaction.</p>
+              <a className="card-link" href="mailto:alex@pairmode.dev">alex@pairmode.dev <span>↗</span></a>
+            </article>
+            <article className="person-card person-card-coral">
+              <div className="portrait portrait-coral"><span>JC</span></div>
+              <div className="person-meta"><span>02</span><span>Systems · Backend</span></div>
+              <h3>Jordan<br />Chen</h3>
+              <p>Builds the sturdy, quiet machinery underneath. Finds beauty in edge cases and clean deployments.</p>
+              <a className="card-link" href="mailto:jordan@pairmode.dev">jordan@pairmode.dev <span>↗</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section className="work-section" id="work">
+          <div className="work-heading">
+            <p className="eyebrow">02 / Selected work</p>
+            <h2>Small teams,<br /><em>big swings.</em></h2>
+            <p>From first sketch to first customer, we work in the messy middle where good products become real.</p>
+          </div>
+          <div className="project-list">
+            <a className="project-row" href="#contact"><span className="project-number">01</span><span className="project-name">Lumen Health</span><span className="project-type">Care platform · 2024</span><span className="project-arrow">↗</span></a>
+            <a className="project-row" href="#contact"><span className="project-number">02</span><span className="project-name">Morrow</span><span className="project-type">Climate data · 2023</span><span className="project-arrow">↗</span></a>
+            <a className="project-row" href="#contact"><span className="project-number">03</span><span className="project-name">Common Ground</span><span className="project-type">Community tools · 2022</span><span className="project-arrow">↗</span></a>
+          </div>
+        </section>
       </main>
+
+      <footer className="site-footer" id="contact">
+        <div><p className="eyebrow">Have a good problem?</p><h2>Let&apos;s make<br /><em>something useful.</em></h2></div>
+        <a className="footer-email" href="mailto:hello@pairmode.dev">hello@pairmode.dev <span>↗</span></a>
+        <div className="footer-bottom"><span>© 2025 Pair Mode</span><span>Built together, apart</span><span>New York · London</span></div>
+      </footer>
     </div>
   );
 }
