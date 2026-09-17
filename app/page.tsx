@@ -39,14 +39,14 @@ export default function Home() {
             <article className="person-card person-card-amber">
               <div className="portrait portrait-amber"><span>AM</span></div>
               <div className="person-meta"><span>01</span><span>Product · Frontend</span></div>
-              <h3>Alex<br />Morgan</h3>
+              <h3>Arshad<br />ali</h3>
               <p>Turns fuzzy ideas into clear, useful interfaces. Loves a good system and an even better interaction.</p>
               <a className="card-link" href="mailto:alex@pairmode.dev">alex@pairmode.dev <span>↗</span></a>
             </article>
             <article className="person-card person-card-coral">
               <div className="portrait portrait-coral"><span>JC</span></div>
               <div className="person-meta"><span>02</span><span>Systems · Backend</span></div>
-              <h3>Jordan<br />Chen</h3>
+              <h3>vivek<br />k pan</h3>
               <p>Builds the sturdy, quiet machinery underneath. Finds beauty in edge cases and clean deployments.</p>
               <a className="card-link" href="mailto:jordan@pairmode.dev">jordan@pairmode.dev <span>↗</span></a>
             </article>
